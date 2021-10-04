@@ -5,7 +5,7 @@ plugins {
     id("io.micronaut.application") version "2.0.3"
     id("org.jetbrains.kotlin.plugin.allopen") version "1.5.21"
     id("org.jetbrains.kotlin.plugin.jpa") version "1.5.21"
-    id 'war'
+
 }
 
 version = "0.1"
@@ -38,8 +38,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-validation")
-   // implementation("mysql:mysql-connector-java:8.0.26")
-    runtimeOnly("com.h2database:h2")
+    implementation("mysql:mysql-connector-java:8.0.26")
+
+    //runtimeOnly("com.h2database:h2")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
 
 }
